@@ -26,17 +26,6 @@ db_name = os.getenv('DB_NAME', 'join_requests.db')
 conn = sqlite3.connect(db_name)
 cursor = conn.cursor()
 
-# Создание таблицы, если она не существует
-cursor.execute('''
-    CREATE TABLE IF NOT EXISTS join_requests (
-        user_id INTEGER PRIMARY KEY,
-        username TEXT,
-        chat_id INTEGER,
-        timestamp INTEGER
-    )
-''')
-conn.commit()
-
 # Загрузка конфигурации из файла YAML
 config_file = 'config.yaml'
 with open(config_file, 'r') as stream:
