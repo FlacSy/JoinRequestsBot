@@ -1,0 +1,8 @@
+messages:
+  captcha_prompt: 'Для продолжения, подтвердите, что вы не являетесь ботом:'
+  captcha_confirmation: 'Спасибо за подтверждение! Ваш запрос принят.'
+  request_ad: True
+  join_request_ad: 'Тут ваша реклама'
+
+database:
+  name: 'join_requests.db'
